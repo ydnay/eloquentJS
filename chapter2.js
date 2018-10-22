@@ -15,7 +15,7 @@
 // console.log(abc.length);
 // → 3
 
-const printTriangle = function() {
+function printTriangle() {
   let hash = '';
   while(hash.length <= 7) {
     console.log(hash);
@@ -35,6 +35,26 @@ printTriangle();
 
 // (This is actually an interview question that has been claimed to weed out a significant percentage of programmer 
 // candidates. So if you solved it, your labor market value just went up.)
+
+function printFizzBuzz() {
+  for(let i = 1; i <= 100; i++) {
+    if(isDivBy3(i) && isDivBy5(i)) {
+      console.log('FizzBuzz');
+    } else if(isDivBy3(i)) {
+      console.log('Fizz');
+    } else if(isDivBy5(i)) {
+      console.log('Buzz');
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+function isDivBy3(n) { return n % 3 === 0 }
+
+function isDivBy5(n) { return n % 5 === 0 }
+
+printFizzBuzz();
 
 // 3-) Chessboard
 // Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. 

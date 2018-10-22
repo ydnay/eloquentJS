@@ -73,3 +73,20 @@ printFizzBuzz();
 
 // When you have a program that generates this pattern, define a binding size = 8 and change the program so that 
 // it works for any size, outputting a grid of the given width and height.
+
+function printChessboard(rows, columns) {
+  let board = '';
+  while(board.length < rows * columns) {
+    if (board.length % 9 === 0) {
+      board += '\n';
+    } else if (board.length % 2 === 0) {
+      board += '#';
+    } else {
+      board += ' ';
+    }
+  }
+
+  console.log(board);
+}
+
+printChessboard(8, 8);

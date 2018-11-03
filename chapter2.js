@@ -23,7 +23,7 @@ function printTriangle() {
   }
 };
 
-printTriangle();
+// printTriangle();
 
 // 2-) FizzBuzz
 // Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. 
@@ -54,7 +54,7 @@ function isDivBy3(n) { return n % 3 === 0 }
 
 function isDivBy5(n) { return n % 5 === 0 }
 
-printFizzBuzz();
+// printFizzBuzz();
 
 // 3-) Chessboard
 // Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. 
@@ -78,7 +78,9 @@ function printChessboard(rows, columns) {
   let board = '';
   while(board.length < rows * columns) {
     if (board.length % 9 === 0) {
+      // console.log(board.length);
       board += '\n';
+      // console.log(board.length);
     } else if (board.length % 2 === 0) {
       board += '#';
     } else {
@@ -86,7 +88,9 @@ function printChessboard(rows, columns) {
     }
   }
 
-  console.log(board);
+  console.log(board, board.length);
 }
 
 printChessboard(8, 8);
+printChessboard(4, 4);
+
